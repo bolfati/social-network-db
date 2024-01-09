@@ -19,7 +19,7 @@ module.exports = {
     } catch (err) {
         res.status(400).json(err);}
     },
-    async haveAThought(req, res) { // makes a thought
+    async haveAThought(req, res) { // makes a thought, big brain time
         try {
             const brandNewThought = await Thought.create(req.body);
             const { username } = req.body;
@@ -30,7 +30,7 @@ module.exports = {
     } catch (err) {
         res.status(400).json(err);}
     },
-    async changeThought(req, res) { //updates a thought
+    async changeThought(req, res) { //updates a thought cuz you were lied to
         try {
             const updatedThought = await Thought.findOneAndUpdate({ _id: req.params.thoughtId }, req.body, { new: true });
             if (!updatedThought) {
@@ -40,7 +40,7 @@ module.exports = {
         } catch (err) {
             res.status(400).json(err);}
     },
-    async removeThought(req, res) { //removes a thought
+    async removeThought(req, res) { //removes a thought big brother style
         try {
             const removedThought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
             if (!removedThought) {
