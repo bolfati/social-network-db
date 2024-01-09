@@ -1,3 +1,3 @@
 const { connect, connection } = require('mongoose');
-connect('mongodb://localhost/social-network-api')
+connect('mongodb://127.0.0.1:27017/social-network-api')
 module.exports = connection;
