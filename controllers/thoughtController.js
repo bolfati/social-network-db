@@ -14,7 +14,7 @@ module.exports = {
 
     async getEveryThought(req, res) {  //grabs every thought
         try {
-        const thought = await Thought.find({});
+        const thought = await Thought.find();
         res.json(thought);
     } catch (err) {
         res.status(400).json(err);}
